@@ -1,4 +1,7 @@
 import PlaceCard from '../../components/place-card/place-card';
+import Logo from '../../components/logo/logo';
+import {Helmet} from 'react-helmet-async';
+
 
 type PlaceCradsCount = {
   placeCradsCount: number;
@@ -7,13 +10,14 @@ type PlaceCradsCount = {
 function MainScreen({placeCradsCount}: PlaceCradsCount): JSX.Element {
   return (
     <div className="page page--gray page--main">
+      <Helmet>
+        <title>6 sities main</title>
+      </Helmet>
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
-              <a className="header__logo-link header__logo-link--active">
-                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
-              </a>
+              <Logo />
             </div>
             <nav className="header__nav">
               <ul className="header__nav-list">
